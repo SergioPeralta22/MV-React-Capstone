@@ -11,7 +11,7 @@
   <br/>
   <br/>
 
-  <h1><b>Todo List Webpack</b></h1>
+  <h1><b>Metrics webapp</b></h1>
 
 </div>
 
@@ -20,7 +20,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Todo List Webpack ](#-todo-list-webpack-)
+- [📖 Metrics webapp ](#-metrics-webapp-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -41,9 +41,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Todo List Webpack <a name="about-project"></a>
+# 📖 Metrics webapp <a name="about-project"></a>
 
-Todo List Webpack is a project with great potential.
+Metrics webapp is a project with great potential.
 
 ## 🛠 Built With <a name="built-with"></a>
 
