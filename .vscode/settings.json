@@ -1,6 +1,6 @@
 {
-  "editor.detectIndentation": false,
-  "editor.insertSpaces": true,
-  "editor.tabSize": 2,
-  "editor.linkedEditing": true
+	//force 2 spaces
+	"editor.tabSize": 2,
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": false
 }
