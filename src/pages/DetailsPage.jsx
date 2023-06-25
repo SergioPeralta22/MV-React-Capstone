@@ -1,4 +1,6 @@
+import ContinentPage from '../components/CountriesMenu';
+
 const DetailsPage = () => (
-  <div>DetailsPage</div>
+  <ContinentPage />
 );
 export default DetailsPage;

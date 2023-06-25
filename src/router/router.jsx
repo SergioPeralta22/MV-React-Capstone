@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
 import NotFoundPage from '../pages/NotFoundPage';
-import DetailsPage from '../pages/DetailsPage';
 import Layout from '../layout/Layout';
+import Region from '../components/CountriesMenu';
 
 const router = createBrowserRouter([
   {
@@ -14,10 +14,10 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: '/details',
+    path: '/:countryName',
     element: (
       <Layout>
-        <DetailsPage />
+        <Region />
       </Layout>
     ),
   },
