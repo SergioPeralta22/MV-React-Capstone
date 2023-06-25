@@ -6,11 +6,10 @@ import { useParams } from 'react-router-dom';
 import { getCountries } from '../redux/countries/countriesSlice';
 import { NavLink } from 'react-router-dom';
 
-const Region = () => {
+const CountriesMenu = () => {
 	const dispatch = useDispatch();
 	const countries = useSelector((state) => state.countries.countries);
 
-  //solve the problem of the first render, change later
 	useEffect(() => {
 	  dispatch(getCountries());
 	}, [dispatch]);
@@ -50,4 +49,4 @@ const Region = () => {
 	);
 };
 
-export default Region;
+export default CountriesMenu;

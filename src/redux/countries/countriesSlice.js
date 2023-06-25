@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const API_URL = 'https://restcountries.com/v3.1/';
@@ -20,8 +21,16 @@ const countriesSlice = createSlice({
     error: null,
   },
   reducers: {
-    clearCountries: (state) => {
-      state.countries = [];
+    getAllCountries: (state) => {
+      state.countries = state.countries.map((country) => {
+        const {
+          name, region, latlng, population, cca2,
+        } = country;
+        return {
+          name, region, latlng, population, cca2,
+        };
+      }
+      );
     },
   },
   extraReducers: (builder) => {
@@ -50,6 +59,6 @@ const countriesSlice = createSlice({
   },
 });
 
-// export const { clearCountries } = countriesSlice.actions;
+export const { getAllCountries } = countriesSlice.actions;
 
 export { countriesSlice };
