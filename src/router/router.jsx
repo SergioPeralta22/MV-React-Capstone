@@ -3,6 +3,7 @@ import App from '../App';
 import NotFoundPage from '../pages/NotFoundPage';
 import Layout from '../layout/Layout';
 import CountriesMenu from '../components/CountriesMenu';
+import Country from '../pages/Country';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,14 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <CountriesMenu />
+      </Layout>
+    ),
+  },
+  {
+    path: '/:countries/:id',
+    element: (
+      <Layout>
+        <Country />
       </Layout>
     ),
   },

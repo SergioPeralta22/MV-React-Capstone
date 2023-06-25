@@ -23,6 +23,11 @@ const CountriesMenu = () => {
 	const filteredCountries = countries.filter((country) => country.region === finalContinent);
 	filteredCountries.sort((a, b) => a.name.common.localeCompare(b.name.common));
 
+  const handleClick = (country) => {
+    dispatch(getCountry(country));
+    console.log(country);
+  };
+
 	return (
 		<div>
 			<header>
@@ -34,7 +39,7 @@ const CountriesMenu = () => {
 			</header>
 			<h4>Population</h4>
 			{filteredCountries.map(({ cca2, name, population, latlng }) => (
-				<NavLink key={cca2} to={`${cca2.toLowerCase()}/${latlng[0]}/${latlng[1]}/${name.common}`}>
+				<NavLink key={cca2} to={`${latlng}:${name.common}:${cca2.toLowerCase()}`} onClick={() => handleClick(cca2)}>
 					<div className='itemCountry'>
 						<img
 							alt={cca2}

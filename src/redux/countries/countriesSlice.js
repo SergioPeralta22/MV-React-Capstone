@@ -19,6 +19,7 @@ const countriesSlice = createSlice({
     countries: [],
     status: null,
     error: null,
+    selectedCountry: null,
   },
   reducers: {
     getAllCountries: (state) => {
@@ -32,6 +33,13 @@ const countriesSlice = createSlice({
       }
       );
     },
+    getCountry: (state, action) => {
+      const { cca2 } = action.payload;
+      state.selectedCountry = state.countries.find((country) => country.cca2 === cca2);
+    }
+
+    
+      
   },
   extraReducers: (builder) => {
     builder
@@ -59,6 +67,6 @@ const countriesSlice = createSlice({
   },
 });
 
-export const { getAllCountries } = countriesSlice.actions;
+export const { getAllCountries, getCountry } = countriesSlice.actions;
 
 export { countriesSlice };
