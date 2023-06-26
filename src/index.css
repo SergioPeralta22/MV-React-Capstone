@@ -16,6 +16,5 @@ body {
 }
 
 .map_svg {
-  width: 100%;
   filter: brightness(0) invert(20%) sepia(80%) hue-rotate(210deg);
 }
