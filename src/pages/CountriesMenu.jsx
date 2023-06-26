@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+/*eslint-disable*/
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { getCountries } from '../redux/countries/countriesSlice';
@@ -6,18 +7,19 @@ import { getCountries } from '../redux/countries/countriesSlice';
 const CountriesMenu = () => {
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.countries.countries);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     dispatch(getCountries());
     window.scrollTo(0, 0);
   }, [dispatch]);
-  // const url = window.location.href;
-  const continent = useSelector((state) => state.selectedContinent);
-  const formattedContinent = continent.charAt(0).toUpperCase() + continent.slice(1);
-  const finalContinent = formattedContinent === 'America' ? `${formattedContinent}s` : formattedContinent;
 
-  const filteredCountries = countries.filter((country) => country.region === finalContinent);
-  filteredCountries.sort((a, b) => a.name.common.localeCompare(b.name.common));
+  let filteredCountries = countries;
+
+  if (searchTerm) {
+    filteredCountries = filteredCountries.filter((country) => country.name.common.toLowerCase().includes(searchTerm.toLowerCase()));
+    filteredCountries.sort((a, b) => a.name.common.localeCompare(b.name.common));
+  }
 
   const getBackgroundColorClass = (index) => {
     const backgroundColorClasses = ['bg-[#4268B1]', 'bg-[#3E60A2]'];
@@ -27,15 +29,16 @@ const CountriesMenu = () => {
 
   return (
     <div>
-      <header className="bg-blue_l flex items-center gap-4 p-4 w-[100vw]">
-        <img
-          className="map_svg w-3/5 h-1/5"
-          alt={continent}
-          src={`https://raw.githubusercontent.com/Ginohmk/worldMaps/main/maps/${continent}/vector.svg`}
+      <main className="bg-blue_l flex-column items-center gap-4 p-4 w-[100vw]">
+        <h2>Search by country name</h2>
+        <input
+          className = "w-[90%] p-2 bg-transparent rounded-md border-2 border-white my-4 placeholder-white outline-none"
+          type="text"
+          placeholder="Search..."
+          value={searchTerm}
+          onChange={(event) => setSearchTerm(event.target.value)}
         />
-        <h3 className="capitalize text-2xl pr-4">{continent}</h3>
-
-      </header>
+      </main>
       <div className="bg-[#35548B] p-2">
         <h4 className="uppercase">Stats by country</h4>
       </div>
@@ -43,12 +46,9 @@ const CountriesMenu = () => {
         {filteredCountries.map(({
           cca2, name, population, latlng,
         }, index) => (
-
-          <NavLink
-            key={cca2}
-            to={`${latlng}:${name.common}:${cca2.toLowerCase()}`}
-          >
-            <div className={`h-full w-full p-4 
+          <NavLink key={cca2} to={`${latlng}:${name.common}:${cca2.toLowerCase()}`}>
+            <div
+              className={`h-full w-full p-4 
           relative ${getBackgroundColorClass(index)}`}
             >
               <img
@@ -71,7 +71,6 @@ const CountriesMenu = () => {
               </div>
             </div>
           </NavLink>
-
         ))}
       </div>
     </div>
