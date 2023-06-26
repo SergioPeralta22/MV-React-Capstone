@@ -2,8 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
 import NotFoundPage from '../pages/NotFoundPage';
 import Layout from '../layout/Layout';
-import CountriesMenu from '../pages/CountriesMenu';
-import Country from '../pages/Country';
+import Details from '../pages/Details';
 
 const router = createBrowserRouter([
   {
@@ -15,18 +14,10 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: '/:countries',
+    path: '/:id',
     element: (
       <Layout>
-        <CountriesMenu />
-      </Layout>
-    ),
-  },
-  {
-    path: '/:countries/:id',
-    element: (
-      <Layout>
-        <Country />
+        <Details />
       </Layout>
     ),
   },

@@ -19,28 +19,8 @@ const countriesSlice = createSlice({
     countries: [],
     status: null,
     error: null,
-    selectedContinent: "europe",
   },
-  reducers: {
-    getAllCountries: (state) => {
-      state.countries = state.countries.map((country) => {
-        const {
-          name, region, latlng, population, cca2,
-        } = country;
-        return {
-          name, region, latlng, population, cca2,
-        };
-      }
-      );
-    },
-    getCountry: (state, action) => {
-      const { cca2 } = action.payload;
-      state.selectedCountry = state.countries.find((country) => country.cca2 === cca2);
-    }
-
-    
-      
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(getCountries.pending, (state) => {

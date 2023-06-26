@@ -16,10 +16,8 @@ const Navbar = () => {
     navigate(-1);
   };
   if (pathname === '/') {
-    title = 'Air Polution - Select a continent';
+    title = 'Air Polution app';
   } else if (pathname.startsWith('/') && pathname.split('/').length === 2) {
-    title = 'Select a country';
-  } else if (pathname.startsWith('/') && pathname.split('/').length === 3) {
     title = 'Stats';
   }
 

@@ -1,9 +1,9 @@
-import CountriesMenu from './pages/CountriesMenu';
+import Home from './pages/Home';
 
 function App() {
   return (
     <>
-      <CountriesMenu />
+      <Home />
     </>
   );
 }
