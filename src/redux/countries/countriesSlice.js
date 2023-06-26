@@ -57,8 +57,6 @@ const countriesSlice = createSlice({
         });
         state.countries = countries;
         state.status = 'success';
-        console.log('countries', countries);
-        console.log('state.countries', state.countries);
       })
       .addCase(getCountries.rejected, (state, action) => {
         state.error = action.error.message;

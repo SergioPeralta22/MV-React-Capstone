@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
 import NotFoundPage from '../pages/NotFoundPage';
 import Layout from '../layout/Layout';
-import CountriesMenu from '../components/CountriesMenu';
+import CountriesMenu from '../pages/CountriesMenu';
 import Country from '../pages/Country';
 
 const router = createBrowserRouter([
