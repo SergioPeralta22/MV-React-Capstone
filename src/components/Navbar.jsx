@@ -26,12 +26,12 @@ const Navbar = () => {
   return (
     <header className="flex bg-blue_header p-2 justify-between">
       { showButton && (
-      <button type="button" className="flex items-center" onClick={handleGoBack}>
+      <button type="button" className="flex items-center text-xl" onClick={handleGoBack}>
         <img src="https://api.iconify.design/ic:sharp-arrow-back-ios.svg?color=%23ffffff" alt="back arrow" />
-        Back
+        2023
       </button>
       )}
-      <h1>{title}</h1>
+      <h1 className="font-normal">{title}</h1>
       <div className="flex gap-3">
         <img className="h-6" src="https://api.iconify.design/carbon:microphone-filled.svg?color=%23ffffff" alt="speak" />
         <img className="h-6" src="https://api.iconify.design/clarity:settings-solid.svg?color=%23ffffff" alt="settings" />

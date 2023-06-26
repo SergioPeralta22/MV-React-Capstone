@@ -19,7 +19,7 @@ const countriesSlice = createSlice({
     countries: [],
     status: null,
     error: null,
-    selectedCountry: null,
+    selectedContinent: "europe",
   },
   reducers: {
     getAllCountries: (state) => {

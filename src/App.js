@@ -1,9 +1,9 @@
-import ContinentMenu from './components/ContinentMenu';
+import CountriesMenu from './pages/CountriesMenu';
 
 function App() {
   return (
     <>
-      <ContinentMenu />
+      <CountriesMenu />
     </>
   );
 }

@@ -11,8 +11,8 @@ const CountriesMenu = () => {
     dispatch(getCountries());
     window.scrollTo(0, 0);
   }, [dispatch]);
-  const url = window.location.href;
-  const continent = url.substring(url.lastIndexOf('/') + 1);
+  // const url = window.location.href;
+  const continent = useSelector((state) => state.selectedContinent);
   const formattedContinent = continent.charAt(0).toUpperCase() + continent.slice(1);
   const finalContinent = formattedContinent === 'America' ? `${formattedContinent}s` : formattedContinent;
 
@@ -63,7 +63,11 @@ const CountriesMenu = () => {
               />
               <div className="absolute right-4">
                 <h3 className="uppercase text-right">{name.common}</h3>
-                <p className="text-right">{population}</p>
+                <p className="text-right">
+                  <span className="font-normal">Population:</span>
+                  {' '}
+                  {population}
+                </p>
               </div>
             </div>
           </NavLink>
