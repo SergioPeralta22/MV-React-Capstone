@@ -1,8 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
 import NotFoundPage from '../pages/NotFoundPage';
-import DetailsPage from '../pages/DetailsPage';
 import Layout from '../layout/Layout';
+import CountriesMenu from '../components/CountriesMenu';
+import Country from '../pages/Country';
 
 const router = createBrowserRouter([
   {
@@ -14,10 +15,18 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: '/details',
+    path: '/:countries',
     element: (
       <Layout>
-        <DetailsPage />
+        <CountriesMenu />
+      </Layout>
+    ),
+  },
+  {
+    path: '/:countries/:id',
+    element: (
+      <Layout>
+        <Country />
       </Layout>
     ),
   },
