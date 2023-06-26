@@ -12,6 +12,9 @@ module.exports = {
         black: '#1d1d1d',
         blue_map: '#2D4573',
       },
+      filter: {
+        custom: 'brightness(0) invert(20%) sepia(80%) hue-rotate(210deg)',
+      },
     },
   },
   plugins: [],

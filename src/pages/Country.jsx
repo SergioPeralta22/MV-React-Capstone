@@ -71,7 +71,7 @@ const Country = () => {
   return (
     <div className="">
       <div className="">
-        <img alt={countryCode} src={`https://raw.githubusercontent.com/Ginohmk/worldMaps/main/maps/${countryCode}/vector.svg`} />
+        <img className='map_svg' alt={countryCode} src={`https://raw.githubusercontent.com/Ginohmk/worldMaps/main/maps/${countryCode}/vector.svg`} />
         <h3>{country}</h3>
         <div className="">
           <h4>Air Pollution</h4>

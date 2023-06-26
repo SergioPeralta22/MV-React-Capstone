@@ -12,8 +12,8 @@ const CountriesMenu = () => {
 
 	useEffect(() => {
 	  dispatch(getCountries());
+    window.scrollTo(0, 0);
 	}, [dispatch]);
-
 	const url = window.location.href;
 	const continent = url.substring(url.lastIndexOf('/') + 1);
 	const formattedContinent = continent.charAt(0).toUpperCase() + continent.slice(1);
@@ -32,6 +32,7 @@ const CountriesMenu = () => {
 		<div>
 			<header>
 				<img
+          className='map_svg'
 					alt={continent}
 					src={`https://raw.githubusercontent.com/Ginohmk/worldMaps/main/maps/${continent}/vector.svg`}
 				/>
@@ -42,10 +43,12 @@ const CountriesMenu = () => {
 				<NavLink key={cca2} to={`${latlng}:${name.common}:${cca2.toLowerCase()}`} onClick={() => handleClick(cca2)}>
 					<div className='itemCountry'>
 						<img
+              className='map_svg'
 							alt={cca2}
 							src={`https://raw.githubusercontent.com/Ginohmk/worldMaps/main/maps/${cca2.toLowerCase()}/vector.svg`}
 						/>
 						<h3 className='uppercase'>{name.common}</h3>
+            <img src="https://api.iconify.design/streamline:interface-arrows-right-circle-1-arrow-keyboard-circle-button-right.svg?color=%23ffffff" alt="go" />
 						<p>{population}</p>
 					</div>
 				</NavLink>
