@@ -8,7 +8,7 @@ import { getInfo } from '../redux/airPolution/airPolutionSlice';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const Country = () => {
+const Details = () => {
 	const { id } = useParams();
 	const [coordinates, country, countryCode] = id.split(':');
 	const [lat, lon] = coordinates.split(',');
@@ -122,4 +122,4 @@ const Country = () => {
 		</div>
 	);
 };
-export default Country;
+export default Details;

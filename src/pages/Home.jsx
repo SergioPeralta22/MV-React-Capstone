@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
@@ -9,17 +8,19 @@ const CountriesMenu = () => {
   const countries = useSelector((state) => state.countries.countries);
   const [searchTerm, setSearchTerm] = useState('');
 
+  const { status, error } = useSelector((state) => state.countries);
+
   useEffect(() => {
     dispatch(getCountries());
     window.scrollTo(0, 0);
   }, [dispatch]);
 
-  let filteredCountries = countries;
+  let filteredCountries = [...countries];
 
   if (searchTerm) {
-    filteredCountries = filteredCountries.filter((country) => country.name.common.toLowerCase().includes(searchTerm.toLowerCase()));
-    filteredCountries.sort((a, b) => a.name.common.localeCompare(b.name.common));
+    filteredCountries = filteredCountries.filter((country) => country.name.common.toLowerCase().includes(searchTerm.toLowerCase())); // eslint-disable-line max-len
   }
+  filteredCountries.sort((a, b) => a.name.common.localeCompare(b.name.common));
 
   const getBackgroundColorClass = (index) => {
     const backgroundColorClasses = ['bg-[#4268B1]', 'bg-[#3E60A2]'];
@@ -32,7 +33,7 @@ const CountriesMenu = () => {
       <main className="bg-blue_l flex-column items-center gap-4 p-4 w-[100vw]">
         <h2>Search by country name</h2>
         <input
-          className = "w-[90%] p-2 bg-transparent rounded-md border-2 border-white my-4 placeholder-white outline-none"
+          className="w-[90%] p-2 bg-transparent rounded-md border-2 border-white my-4 placeholder-white outline-none"
           type="text"
           placeholder="Search..."
           value={searchTerm}
@@ -43,7 +44,14 @@ const CountriesMenu = () => {
         <h4 className="uppercase">Stats by country</h4>
       </div>
       <div className="grid grid-cols-2">
-        {filteredCountries.map(({
+        {status === 'loading' && (
+        <div
+          className="text-2xl p-5"
+        >
+          Loading...
+        </div>
+        )}
+        { filteredCountries.map(({
           cca2, name, population, latlng,
         }, index) => (
           <NavLink key={cca2} to={`${latlng}:${name.common}:${cca2.toLowerCase()}`}>
@@ -72,6 +80,7 @@ const CountriesMenu = () => {
             </div>
           </NavLink>
         ))}
+        {status === 'failed' && <div>{error}</div>}
       </div>
     </div>
   );
