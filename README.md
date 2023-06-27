@@ -28,7 +28,6 @@
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
-    - [Install](#install)
     - [Usage](#usage)
     - [Run tests](#run-tests)
     - [Deployment](#deployment)
@@ -56,10 +55,10 @@ Metrics webapp is a project with great potential.
 
 <details>
   <summary>Client</summary>
-   - HTML<br>
-   - CSS <br>
-   - Javascript <br>
-   - Webpack <br>
+   - React <br>
+   - Redux Toolkit <br>
+   - Tailwind CSS <br>
+   - React Router <br>
 </details>
 
 <details>
@@ -80,8 +79,10 @@ Metrics webapp is a project with great potential.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://sergioperalta22.github.io/To-Do-List-Webpack/)
 
+
+- [Live Demo](https://649a4e85b14d052e99046154--tubular-toffee-d5af3c.netlify.app/)
+- [Proyect Overview Video](https://www.loom.com/share/06f9e71a283f4338b337bb958af273b8?sid=86295f38-2507-4ec4-b5ee-f6fa6f5e776c)
 <!-- - No live demo available yet -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,9 +101,10 @@ To get a local copy up and running, follow these steps.
 Clone this repository to your desired folder:
 
 ```sh
-   git clone https://github.com/SergioPeralta22/To-Do-List-Webpack
+   git clone https://github.com/SergioPeralta22/Metrics-webapp.git
+   cd Metrics-webapp
 ```
-
+<!-- 
 ### Install
 
 Install this project with:
@@ -116,28 +118,29 @@ Example command:
   gem install
 ```
 
---->
+---> -->
 
 ### Usage
 
-To run the project, execute the following command:
+- After cloning the project in the project directory you need to run this command
+  > npm install
+   `This command will download all the dependencies of the project`
 
-- use live server plugin.
+  > npm start
 
-<!--
-Example command:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-```sh
-  rails server
-```
---->
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
 ### Run tests
 
 To run tests, run the following command:
 
-- no tests available
-
+```sh
+  npm test
+```
 <!--
 Example command:
 
@@ -150,7 +153,8 @@ Example command:
 
 You can deploy this project using:
 
-- Github Pages
+- Netlify
+- Vercel
 
 <!--
 Example:
@@ -174,9 +178,9 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Add task feature** ✔️
-- **Delete task feature** ✔️
-- **Edit task feature** ✔️
+- Add more metrics
+- Add more charts
+- Add more data
 
 <!-- ## Walkthrough <a name="walkthrough"></a>
 
