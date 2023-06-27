@@ -1,0 +1,6 @@
+{
+	//force 2 spaces
+	"editor.tabSize": 2,
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": false
+}
