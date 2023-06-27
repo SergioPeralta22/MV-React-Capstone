@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { getCountries } from '../redux/countries/countriesSlice';
 
-const CountriesMenu = () => {
+const Home = () => {
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.countries.countries);
   const [searchTerm, setSearchTerm] = useState('');
@@ -12,7 +12,6 @@ const CountriesMenu = () => {
 
   useEffect(() => {
     dispatch(getCountries());
-    window.scrollTo(0, 0);
   }, [dispatch]);
 
   let filteredCountries = [...countries];
@@ -86,4 +85,4 @@ const CountriesMenu = () => {
   );
 };
 
-export default CountriesMenu;
+export default Home;
