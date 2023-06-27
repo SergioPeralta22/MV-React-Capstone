@@ -4,7 +4,6 @@ import { MemoryRouter } from 'react-router-dom';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import Home from '../pages/Home';
-import { getCountries, selectCountries, selectStatus } from '../redux/countries/countriesSlice';
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
@@ -38,7 +37,7 @@ describe('Home Page', () => {
         <MemoryRouter>
           <Home />
         </MemoryRouter>
-      </Provider>
+      </Provider>,
     );
 
     const spainElement = screen.getByText('Spain');
@@ -46,7 +45,5 @@ describe('Home Page', () => {
 
     const franceElement = screen.getByText('France');
     expect(franceElement).toBeInTheDocument();
-
-    
   });
 });
