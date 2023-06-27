@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { getCountries } from '../redux/countries/countriesSlice';
 
-const CountriesMenu = () => {
+const Home = () => {
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.countries.countries);
   const [searchTerm, setSearchTerm] = useState('');
@@ -86,4 +86,4 @@ const CountriesMenu = () => {
   );
 };
 
-export default CountriesMenu;
+export default Home;
