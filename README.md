@@ -82,7 +82,7 @@ Metrics webapp is a project with great potential.
 
 
 - [Live Demo](https://649a4e85b14d052e99046154--tubular-toffee-d5af3c.netlify.app/)
-- [Proyect Overview Video](https://www.loom.com/share/06f9e71a283f4338b337bb958af273b8?sid=86295f38-2507-4ec4-b5ee-f6fa6f5e776c)
+- [Proyect Overview Video](https://www.loom.com/share/fdaf9e7282ca48aa9342663feffa7919?sid=05ffb351-3cc2-40a4-bdb3-f310882b070c)
 <!-- - No live demo available yet -->
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
