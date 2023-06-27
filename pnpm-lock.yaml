@@ -60,9 +60,6 @@ devDependencies:
   '@babel/preset-react':
     specifier: ^7.22.3
     version: 7.22.3(@babel/core@7.22.1)
-  '@wojtekmaj/enzyme-adapter-react-17':
-    specifier: ^0.8.0
-    version: 0.8.0(enzyme@3.11.0)(react-dom@18.2.0)(react@18.2.0)
   enzyme:
     specifier: ^3.11.0
     version: 3.11.0
@@ -3067,36 +3064,6 @@ packages:
       '@webassemblyjs/ast': 1.11.6
       '@xtuc/long': 4.2.2
     dev: false
-
-  /@wojtekmaj/enzyme-adapter-react-17@0.8.0(enzyme@3.11.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-zeUGfQRziXW7R7skzNuJyi01ZwuKCH8WiBNnTgUJwdS/CURrJwAhWsfW7nG7E30ak8Pu3ZwD9PlK9skBfAoOBw==}
-    peerDependencies:
-      enzyme: ^3.0.0
-      react: ^17.0.0-0
-      react-dom: ^17.0.0-0
-    dependencies:
-      '@wojtekmaj/enzyme-adapter-utils': 0.2.0(react@18.2.0)
-      enzyme: 3.11.0
-      enzyme-shallow-equal: 1.0.5
-      has: 1.0.3
-      prop-types: 15.8.1
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      react-is: 17.0.2
-      react-test-renderer: 17.0.2(react@18.2.0)
-    dev: true
-
-  /@wojtekmaj/enzyme-adapter-utils@0.2.0(react@18.2.0):
-    resolution: {integrity: sha512-ZvZm9kZxZEKAbw+M1/Q3iDuqQndVoN8uLnxZ8bzxm7KgGTBejrGRoJAp8f1EN8eoO3iAjBNEQnTDW/H4Ekb0FQ==}
-    peerDependencies:
-      react: ^17.0.0-0
-    dependencies:
-      function.prototype.name: 1.1.5
-      has: 1.0.3
-      object.fromentries: 2.0.6
-      prop-types: 15.8.1
-      react: 18.2.0
-    dev: true
 
   /@xtuc/ieee754@1.2.0:
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
@@ -9130,6 +9097,7 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
 
   /react-error-overlay@6.0.11:
     resolution: {integrity: sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==}
@@ -9140,9 +9108,11 @@ packages:
 
   /react-is@17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
+    dev: false
 
   /react-is@18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
+    dev: false
 
   /react-redux@8.1.1(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1):
     resolution: {integrity: sha512-5W0QaKtEhj+3bC0Nj0NkqkhIv8gLADH/2kYFMTHxCVqQILiWzLv6MaLuV5wJU3BQEdHKzTfcvPN0WMS6SC1oyA==}
@@ -9301,16 +9271,6 @@ packages:
       - webpack-plugin-serve
     dev: false
 
-  /react-shallow-renderer@16.15.0(react@18.2.0):
-    resolution: {integrity: sha512-oScf2FqQ9LFVQgA73vr86xl2NaOIX73rh+YFqcOp68CWj56tSfgtGKrEbyhCj0rSijyG9M1CYprTh39fBi5hzA==}
-    peerDependencies:
-      react: ^16.0.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      object-assign: 4.1.1
-      react: 18.2.0
-      react-is: 18.2.0
-    dev: true
-
   /react-simple-maps@3.0.0(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-vKNFrvpPG8Vyfdjnz5Ne1N56rZlDfHXv5THNXOVZMqbX1rWZA48zQuYT03mx6PAKanqarJu/PDLgshIZAfHHqw==}
     peerDependencies:
@@ -9327,23 +9287,12 @@ packages:
       topojson-client: 3.1.0
     dev: false
 
-  /react-test-renderer@17.0.2(react@18.2.0):
-    resolution: {integrity: sha512-yaQ9cB89c17PUb0x6UfWRs7kQCorVdHlutU1boVPEsB8IDZH6n9tHxMacc3y0JoXOJUsZb/t/Mb8FUWMKaM7iQ==}
-    peerDependencies:
-      react: 17.0.2
-    dependencies:
-      object-assign: 4.1.1
-      react: 18.2.0
-      react-is: 17.0.2
-      react-shallow-renderer: 16.15.0(react@18.2.0)
-      scheduler: 0.20.2
-    dev: true
-
   /react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
 
   /read-cache@1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
@@ -9720,17 +9669,11 @@ packages:
       xmlchars: 2.2.0
     dev: false
 
-  /scheduler@0.20.2:
-    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-    dev: true
-
   /scheduler@0.23.0:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
 
   /schema-utils@2.7.0:
     resolution: {integrity: sha512-0ilKFI6QQF5nxDZLFn2dMjvc4hjg/Wkg7rHd3jK6/A4a1Hl9VFdQWvgB1UMGoU94pad1P/8N7fMcEnLnSiju8A==}
