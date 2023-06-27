@@ -12,7 +12,6 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(getCountries());
-    window.scrollTo(0, 0);
   }, [dispatch]);
 
   let filteredCountries = [...countries];
