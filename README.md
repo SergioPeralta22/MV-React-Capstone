@@ -208,7 +208,9 @@ If you like this project, give it a ⭐️!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for giving me the opportunity to learn and grow as a developer.
+- I would like to thank Microverse for giving me the opportunity to learn and grow as a developer.
+
+- Thanks to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) the [author of the original design] Under the [Creative Commons License](https://creativecommons.org/licenses/by-nc/4.0/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
